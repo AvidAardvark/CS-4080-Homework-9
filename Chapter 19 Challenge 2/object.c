@@ -5,3 +5,11 @@ ObjString* makeString(bool ownsChars, char* chars, int length) {
   string->chars = chars;
   return string;
 }
+
+void printObject(Value value) {
+  switch (OBJ_TYPE(value)) {
+    case OBJ_STRING:
+      printf("%.*s", AS_STRING(value)->length, AS_CSTRING(value));
+      break;
+  }
+}
