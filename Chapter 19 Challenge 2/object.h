@@ -6,3 +6,4 @@ struct ObjString {
 };
 
 ObjString* makeString(bool ownsChars, char* chars, int length);
+void printObject(Value value);
